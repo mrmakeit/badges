@@ -1,0 +1,1 @@
+/home/blixa/src/badges/badges/__init__.py
