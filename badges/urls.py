@@ -16,4 +16,7 @@ urlpatterns = patterns('',
 	url(r'^logout/$', 'badges.views.logout'),
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^badges/', include('badger.urls')),
+	url(r'^uploads/(?P<path>.*)$', 'django.views.static.serve',{'document_root': ''}),
+
 )
+
