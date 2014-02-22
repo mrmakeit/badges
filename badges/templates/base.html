@@ -3,6 +3,9 @@
         {% block extrahead %}{% endblock %}
     </head>
     <body id="{% block pageid %}{% endblock %}">
+	{% if user.username %}
+	<a href="/logout">Logout</a>
+	{% endif %}
         {% block content %}{% endblock %}
     </body>
 </html>

@@ -10,6 +10,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import keys
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -36,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'social.apps.django_app.default',
 	'south',
 	'badges',
 	'badger',
@@ -54,7 +57,6 @@ ROOT_URLCONF = 'badges.urls'
 
 WSGI_APPLICATION = 'badges.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
@@ -65,12 +67,45 @@ DATABASES = {
     }
 }
 
-TEMPLATE_LOADERS = (
-    #'jingo.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+AUTHENTICATION_BACKENDS = {
+	'social.backends.github.GithubOAuth2',
+	'social.backends.twitter.TwitterOAuth',
+	'django.contrib.auth.backends.ModelBackend',
+}
+
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/badges/'
+URL_PATH = ''
+SOCIAL_AUTH_STRATEGY = 'social.strategies.django_strategy.DjangoStrategy'
+SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
+SOCIAL_AUTH_GITHUB_KEY = keys.GITHUB_KEY
+SOCIAL_AUTH_GITHUB_SECRET = keys.GITHUB_SECRET
+
+# SOCIAL_AUTH_USERNAME_FORM_URL = '/signup-username'
+SOCIAL_AUTH_USERNAME_FORM_HTML = 'username_signup.html'
+
+SOCIAL_AUTH_PIPELINE = (
+    'social.pipeline.social_auth.social_details',
+    'social.pipeline.social_auth.social_uid',
+    'social.pipeline.social_auth.auth_allowed',
+    'social.pipeline.social_auth.social_user',
+    'social.pipeline.user.get_username',
+    'social.pipeline.mail.mail_validation',
+    'social.pipeline.user.create_user',
+    'social.pipeline.social_auth.associate_user',
+    'social.pipeline.social_auth.load_extra_data',
+    'social.pipeline.user.user_details'
 )
 
+TEMPLATE_LOADERS = (
+    'django.template.loaders.app_directories.Loader',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
+	'django.contrib.auth.context_processors.auth',
+)
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
