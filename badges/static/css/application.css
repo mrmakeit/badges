@@ -2,9 +2,6 @@ body {
 	margin: 0;
 }
 
-section{
-	border: 1px solid black;
-}
 
 span{
 	max-width: 10px;
@@ -26,6 +23,9 @@ span{
 .badges_list .badges{
 	list-style-type: none;
 }
+.awards_list .awards{
+	list-style-type: none;
+}
 
 .badges_list .badges .badge{
 	font-family: Sans-serif;
@@ -38,6 +38,16 @@ span{
 	white-space: nowrap;
 }
 
+.awards_list .awards .award{
+	font-family: Sans-serif;
+	display: inline-block;
+	padding: 5px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 .badges_list .badges .badge  .image{
 	font-family: Sans-serif;
 }

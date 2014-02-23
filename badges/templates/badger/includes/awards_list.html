@@ -8,14 +8,12 @@
             <a class="award_image"><img src="{% award_image award %}"
                 alt="{{ award.badge.title }}" width="128" height="128" /></a>
         
-            <a class="label">
+            <div class="label">
                 <span class="badge_title">{{ award.badge.title }}</span>
                 <span class="relation">awarded to</span>
                 <span class="user">{{ award.user }}</span>
-            </a>
+            </div>
             
-            <a class="avatar_image"><img src="{% user_avatar award.user %}"
-                alt="{{ award.badge.title }}" width="128" height="128" /></a>            
 
         </li>
 
