@@ -15,7 +15,7 @@ def logout(request):
 def home(request):
     """Home view, displays login mechanism"""
     if request.user.is_authenticated():
-        return redirect('/badges/')
+        return redirect('/user/')
     return render_to_response('home.html', {
     }, RequestContext(request))
 
