@@ -3,5 +3,7 @@
 
 {% block content %}
 <a href="{% url 'social:begin' 'github' %}">Github OAuth2</a> <br />
+<div id="available_badges">
+	<iframe scrolling="no" width=100% height="300px" src="/badges"></iframe>
+</div>
 {% endblock %}
-
