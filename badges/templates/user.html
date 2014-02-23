@@ -3,21 +3,24 @@
 
 {% block extrahead %}
 <script src="/static/js/user.js"></script>
+<link rel="stylesheet" href="/static/css/user.css">
 {% endblock %}
 {% block content %}
-<div class="">
-	<h1>Welcome {{ request.user }}</h1>
+<div class="page-header">
+	<h1>Welcome {{ request.user }}!</h1>
 </div>
 <div class="badge_list">
 	<h3>Current Badges:</h3>
-	{{ badge_list }}
-	{{ user }}
     {% include "badger/includes/awards_as_badges_list.html" %}
 </div>
 <div class="sidebar">
+
 	<div class="badge_code">
+		<h5>Clame a badge</h5>
+		<div class="input_wrapper">
 		<input id="badge_code"></input>
-		<a href="#" onClick="getCode()">Redeem Badge</a>
+	</div>
+		<a class="button green" href="#" onClick="getCode()">Redeem Badge</a>
 	</div>
 </div>
 {% endblock %}

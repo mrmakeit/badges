@@ -1,5 +1,5 @@
 body {
-	background-color: #808080;
+	margin: 0;
 }
 
 section{
@@ -42,3 +42,40 @@ span{
 	font-family: Sans-serif;
 }
 
+header{
+	background: #000;
+	margin: 0;
+	padding: 10px;
+}
+
+header a#logout {
+	display: inline;
+	float: right;
+}
+.clearfix:after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+   *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML += '<div class="ie7-clear"></div>' );
+}
+
+.button{
+	padding: 5px 10px;
+	border-radius: 5px;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	color: #fff;
+	text-decoration: none;
+}
+
+.button.green{
+	background-image: linear-gradient(to bottom,#62c462,#51a351);
+	background-repeat: repeat-x;
+}
+
+div.title{
+	color: #fff;
+	display: inline;
+	float: left;
+	font-size: 26px;
+}

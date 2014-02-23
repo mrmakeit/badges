@@ -5,9 +5,14 @@
 	<link rel="stylesheet" href="{% static "css/application.css" %}"/>
     </head>
     <body id="{% block pageid %}{% endblock %}">
+	<header class="clearfix">
+		<div class="title">Code for Tulsa Badges</div>
+	{% block header %}
 	{% if user.username %}
-	<a href="/logout">Logout</a>
+	<a id="logout" class="button green" href="/logout">Logout</a>
 	{% endif %}
+	{% endblock %}
+</header>
         {% block content %}{% endblock %}
     </body>
 </html>
