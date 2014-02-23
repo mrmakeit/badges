@@ -75,7 +75,7 @@ AUTHENTICATION_BACKENDS = {
 }
 
 LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/badges/'
+LOGIN_REDIRECT_URL = '/user/'
 URL_PATH = ''
 SOCIAL_AUTH_STRATEGY = 'social.strategies.django_strategy.DjangoStrategy'
 SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
