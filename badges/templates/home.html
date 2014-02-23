@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 {% load url from future %}
+{% block extrahead %}
+<link rel="stylesheet" href="/static/css/home.css">
+<script src="/static/js/home.js"></script>
+{% endblock %}
 
+{% block header %}
+<a class="button green" id="login" href="#" onClick="showLogin()"> Login </a>
+{% endblock %}
 {% block content %}
-<a href="{% url 'social:begin' 'github' %}">Github OAuth2</a> <br />
+<div id='signin-box'>
+	<h3>Login</h3>
+	<a class="button green" href="{% url 'social:begin' 'github' %}">Github OAuth2</a> <br />
+</div>
 <div id="available_badges">
 	<iframe scrolling="no" width=100% height="300px" src="/badges"></iframe>
 </div>

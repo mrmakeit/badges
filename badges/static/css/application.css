@@ -52,6 +52,10 @@ header a#logout {
 	display: inline;
 	float: right;
 }
+header a#login {
+	display: inline;
+	float: right;
+}
 .clearfix:after { 
    content: " ";
    display: block; 

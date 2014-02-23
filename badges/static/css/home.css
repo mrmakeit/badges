@@ -1,0 +1,25 @@
+#signin-box{
+	position: absolute;
+	left: 46%;
+	top: 50%;
+	background: #efefef;
+	padding: 2%;
+	border-radius: 5px;
+	border: solid;
+	display:none;
+}
+
+#signin-box h3{
+	margin-top: 0;
+	background: black;
+	margin: -23%;
+	margin-bottom: 27px;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px 5px 0 0;
+}
+
+#signin-box.show {
+	display:inherit;
+}
