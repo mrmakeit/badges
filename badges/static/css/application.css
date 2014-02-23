@@ -16,19 +16,25 @@ span{
  
 
 .badges_list h2{
-	font-family: Sans-serif;
+	margin-left: 20px;
+	margin-top: 10px;
 }
 
+.awards_list h2{
+	margin-left: 20px;
+	margin-top: 10px;
+}
 
 .badges_list .badges{
 	list-style-type: none;
+	padding-left: 20;
 }
 .awards_list .awards{
 	list-style-type: none;
+	padding-left: 20;
 }
 
 .badges_list .badges .badge{
-	font-family: Sans-serif;
 	display: inline-block;
 	padding: 5px;
 	text-align: center;
@@ -39,7 +45,6 @@ span{
 }
 
 .awards_list .awards .award{
-	font-family: Sans-serif;
 	display: inline-block;
 	padding: 5px;
 	text-align: center;
