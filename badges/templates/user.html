@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block content %}
+<div class="">
+	<h1>Welcome {{ request.user }}</h1>
+</div>
+<div class="badge_list">
+	<h3>Current Badges:</h3>
+	{{ badge_list }}
+	{{ user }}
+    {% include "badger/includes/awards_as_badges_list.html" %}
+</div>
+{% endblock %}
+
