@@ -14,7 +14,10 @@ span{
 	white-space: nowrap;	
 	width: 10px;
 }
- 
+
+.page-header h1{
+	margin-left: 20px;
+}
 
 .badges_list h2{
 	margin-left: 20px;
