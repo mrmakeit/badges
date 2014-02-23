@@ -130,3 +130,5 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/uploads/'
      
 BADGER_ALLOW_ADD_BY_ANYONE = False
+
+STATIC_ROOT = 'badges.codefortulsa.com'
