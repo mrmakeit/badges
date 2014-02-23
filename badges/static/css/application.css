@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	font-family: Arial, Helvetica, Sans-serif;
 }
 
 
@@ -54,7 +55,7 @@ span{
 	white-space: nowrap;
 }
 .badges_list .badges .badge  .image{
-	font-family: Sans-serif;
+	font-family: Arial, Helvetica, Sans-serif;
 }
 
 header{
