@@ -2,7 +2,7 @@
     {% for badge in badge_list %}
 
         <li class="badge">
-            <a href="{{ badge.get_absolute_url }}" class="image">
+            <a class="image">
             {% if badge.image %}
                 <img src="{{badge.image.url}}" 
             {% else %}
@@ -10,7 +10,7 @@
             {% endif %}
         
                 alt="{{ badge.title }}" width="128" height="128" /></a><br/>
-           <div class="textlimit" > <a href="{{ badge.get_absolute_url }}" class="label"><span class="title">{{ badge.title }}</span></a></div>
+           <div class="textlimit" > <a class="label"><span class="title">{{ badge.title }}</span></a></div>
         </li>
     {% endfor %}
 </ul>

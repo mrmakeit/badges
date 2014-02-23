@@ -3,9 +3,9 @@
     {% for award in award_list %}
     
         <li class="badge">
-            <a href="{{ award.get_absolute_url }}" class="image"><img src="{% award_image award %}"
+            <a class="image"><img src="{% award_image award %}"
                 alt="{{ award.badge.title }}" width="128" height="128" /></a>            
-            <a href="{{ award.get_absolute_url }}" class="label">
+            <a class="label">
                 <span class="title">{{ award.badge.title }}</span></a>
         </li>
     {% endfor %}
