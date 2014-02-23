@@ -28,6 +28,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 # Application definition
 
@@ -45,9 +46,9 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE_CLASSES = (
+#    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -105,6 +106,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'social.apps.django_app.context_processors.backends',
     'social.apps.django_app.context_processors.login_redirect',
 	'django.contrib.auth.context_processors.auth',
+	'django.core.context_processors.request',
 )
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -126,3 +128,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/uploads/'
+     
+BADGER_ALLOW_ADD_BY_ANYONE = False
