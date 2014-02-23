@@ -1,0 +1,44 @@
+body {
+	background-color: #808080;
+}
+
+section{
+	border: 1px solid black;
+}
+
+span{
+	max-width: 10px;
+}
+
+.badges_list .badges .badge .textlimit .title{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;	
+	width: 10px;
+}
+ 
+
+.badges_list h2{
+	font-family: Sans-serif;
+}
+
+
+.badges_list .badges{
+	list-style-type: none;
+}
+
+.badges_list .badges .badge{
+	font-family: Sans-serif;
+	display: inline-block;
+	padding: 5px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.badges_list .badges .badge  .image{
+	font-family: Sans-serif;
+}
+

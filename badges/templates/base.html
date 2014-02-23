@@ -1,6 +1,8 @@
 <html>
     <head>
         {% block extrahead %}{% endblock %}
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static "css/application.css" %}"/>
     </head>
     <body id="{% block pageid %}{% endblock %}">
 	{% if user.username %}
