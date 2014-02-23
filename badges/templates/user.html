@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load url from future %}
 
+{% block extrahead %}
+<script src="/static/js/user.js"></script>
+{% endblock %}
 {% block content %}
 <div class="">
 	<h1>Welcome {{ request.user }}</h1>
@@ -10,6 +13,12 @@
 	{{ badge_list }}
 	{{ user }}
     {% include "badger/includes/awards_as_badges_list.html" %}
+</div>
+<div class="sidebar">
+	<div class="badge_code">
+		<input id="badge_code"></input>
+		<a href="#" onClick="getCode()">Redeem Badge</a>
+	</div>
 </div>
 {% endblock %}
 
